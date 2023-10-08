@@ -1,9 +1,4 @@
 #!/bin/bash
-
-#this already uploaded as gist to github
-
-#I'm shorteing the link with my custom shortnet hosted on cloudflar workers
-
 args=${@:1}  # Capture user-provided arguments
 
 os=$(uname -s | tr '[:upper:]' '[:lower:]')
@@ -13,7 +8,7 @@ if [ "$arch" = "x86_64" ]; then
 fi
 
 
-repo="bodaay/HuggingFaceModelDownloader"
+repo="rama-adi/HuggingFaceModelDownloader"
 latest_tag=$(curl --silent "https://api.github.com/repos/$repo/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 
 
